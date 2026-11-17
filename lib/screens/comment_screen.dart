@@ -14,7 +14,6 @@ class CommentScreen extends StatefulWidget {
 class _CommentScreenState extends State<CommentScreen> {
   final ApiService apiService = ApiService();
 
-  // Future comment ditaruh di method, bukan initState
   Future<List<Comment>> _loadComments() {
     return apiService.fetchComments(widget.postId);
   }
@@ -56,7 +55,6 @@ class _CommentScreenState extends State<CommentScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Formatisasi tampilan Name, Email, dan Body
                       Text(
                         comment.name,
                         style: const TextStyle(

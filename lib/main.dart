@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'services/app_theme.dart';
-import 'screens/home_screen.dart';
+import 'screens/post_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Post & Album App',
-      theme: AppTheme.lightTheme, // Panggil dari file terpisah!
-      home: const HomeScreen(),
+      title: 'Daftar Post App',
+      theme: AppTheme.lightTheme,
+      home: const PostScreen(), // Halaman awal langsung Daftar Post
       debugShowCheckedModeBanner: false,
     );
   }
